@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TechShop</title>
+  <link rel="icon" href="assets/icon/favicon.ico" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="auth-container">
+    <div id="loginRegisterToggle">
+      <button id="showRegisterFormButton"><i class="fas fa-user-plus"></i>Cadastrar</button>
+      <button id="showLoginFormButton"><i class="fas fa-sign-in-alt"></i>Login</button>
+      <a href="admin.html">
+        <button id="privilegedAccessButton"><i class="fas fa-lock"></i>Acesso Privilegiado</button>
+      </a>
+    </div>
+
+    <div id="registerForm" class="hidden">
+      <h1>Cadastro de Usuário</h1>
+      <form>
+        <input type="text" id="name" placeholder="Nome Completo" required><br>
+        <input type="email" id="email" placeholder="Email" required><br>
+        <input type="password" id="password" placeholder="Senha" required><br>
+        <input type="text" id="phone" placeholder="Telefone" required><br>
+        <input type="date" id="birthdate" placeholder="Data de Nascimento" required><br>
+        <button type="submit"><i class="fas fa-user-plus"></i>Cadastrar</button>
+      </form>
+    </div>
+
+    <div id="loginForm">
+      <h1>Login de Usuário</h1>
+      <form>
+        <input type="text" id="username" placeholder="Nome de usuário" required><br>
+        <input type="password" id="loginPassword" placeholder="Senha" required><br>
+        <button type="submit"><i class="fas fa-sign-in-alt"></i>Entrar</button>
+      </form>
+    </div>
+
+    <div id="loggedIn" class="hidden">
+      <h2>Bem-vindo, <span id="userName"></span>!</h2>
+      <button id="logoutButton"><i class="fas fa-sign-out-alt"></i>Sair</button>
+    </div>
+  </div>
+
+  <div id="productsContainer" class="hidden">
+    <!-- Os produtos serão exibidos aqui -->
+  </div>
+
+  <div>
+    <button id="viewCartButton"><i class="fas fa-shopping-cart"></i> Ver Carrinho</button>
+
+  </div>
+
+  <div id="cartContainer" class="hidden">
+    <h2>Carrinho de Compras</h2>
+    <ul id="cartItems"></ul>
+    <button id="finalizePurchaseButton">Finalizar Compra</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

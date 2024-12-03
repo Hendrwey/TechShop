@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Administração - TechShop</title>
+  <link rel="icon" href="assets/icon/favicon.ico" type="image/x-icon">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="admin.css">
+</head>
+<body>
+  <h1>Painel Administrativo TechShop</h1>
+
+  <div id="adminLoginContainer">
+    <h2>Login de Acesso Privilegiado</h2>
+    <form id="adminLoginForm">
+      <input type="text" id="adminUsername" placeholder="Usuário" required>
+      <input type="password" id="adminPassword" placeholder="Senha" required>
+      <button type="submit"><i class="fas fa-sign-in-alt"></i>Entrar</button>
+    </form>
+    <div id="loginError" class="hidden">Acesso negado! Verifique as credenciais.</div>
+  </div>
+
+  <div id="backLink">
+    <a href="index.html"><i class="fas fa-arrow-left"></i>Voltar</a>
+  </div>
+
+  <div id="adminPanel" class="hidden">
+    <h2>Gerenciar Usuários e Produtos</h2>
+    <section>
+      <h3>Usuários Cadastrados</h3>
+      <ul id="users"></ul>
+    </section>
+
+    <section>
+      <h3>Produtos Cadastrados</h3>
+      <ul id="products"></ul>
+      <button id="addProductButton">Adicionar Produto</button>
+    </section>
+
+    <button id="logoutButton"><i class="fas fa-sign-out-alt"></i>Sair</button>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>

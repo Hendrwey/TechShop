@@ -1,0 +1,176 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+}
+
+#auth-container {
+  padding: 20px;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+h1, h2 {
+  color: #333;
+}
+
+button {
+  background-color: #38167d;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* Ajustando os ícones nos botões */
+button i {
+  margin-right: 8px; /* Espaço entre o ícone e o texto */
+  font-size: 16px; /* Tamanho do ícone */
+  vertical-align: middle; /* Alinha o ícone ao texto */
+}
+
+button:hover {
+  background-color: #0a6362;
+}
+
+.hidden {
+  display: none;
+}
+
+#loginRegisterToggle {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#loggedIn {
+  text-align: center;
+}
+
+#showRegisterFormButton, #showLoginFormButton {
+  background-color: #008CBA;
+  width: 48%;
+}
+
+#showRegisterFormButton:hover, #showLoginFormButton:hover {
+  background-color: #007bb5;
+}
+
+#productsContainer {
+  display: flex; /* Ativa o Flexbox */
+  flex-wrap: wrap; /* Permite que os itens "quebrem" para a próxima linha */
+  gap: 20px; /* Espaço entre os produtos */
+  justify-content: flex-start; /* Alinha os itens à esquerda */
+  padding: 10px; /* Espaçamento interno */
+}
+
+.product {
+  flex: 0 1 calc(20% - 20px); /* Cada produto ocupa 20% da linha (5 por linha) */
+  box-sizing: border-box; /* Inclui o padding e border no tamanho total */
+  text-align: center; /* Centraliza o texto */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #fff;
+}
+
+.product h3 {
+  margin: 10px 0;
+}
+
+.product p {
+  font-weight: bold;
+}
+
+/* Botões do produto */
+.product button {
+  width: auto; /* Botão ajusta ao texto */
+  padding: 5px 10px; /* Ajusta espaçamento interno */
+  font-size: 12px; /* Tamanho menor para combinar com o layout */
+  margin-top: 10px; /* Espaçamento entre os elementos */
+}
+
+/* Botão do carrinho */
+#viewCartButton {
+  background-color: #ff5722;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border-radius: 4px;
+  margin-top: 20px; /* Ajuste o valor conforme necessário */
+  margin-left: 10px;
+}
+
+#cartButton:hover {
+  background-color: #e64a19;
+}
+
+#cartContainer {
+  margin-left: 10px;
+}
+
+/* Media Queries para Responsividade */
+
+/* Para telas menores que 600px */
+@media (max-width: 600px) {
+  #auth-container {
+    max-width: 90%; /* Reduz a largura do container de autenticação */
+    padding: 10px; /* Diminui o padding */
+  }
+
+  .product {
+    width: 100%; /* Faz os produtos ocuparem toda a largura disponível */
+  }
+
+  #productsContainer {
+    justify-content: center; /* Centraliza os itens */
+  }
+
+  #showRegisterFormButton, #showLoginFormButton, #privilegedAccessButton{
+    width: 100%; /* Faz os botões de mostrar formulário ocuparem toda a largura */
+    margin-top: 10px; /* Ajusta o espaçamento */
+  }
+
+  #viewCartButton {
+    width: 100%; /* Faz o botão do carrinho ocupar toda a largura */
+    margin-top: 10px; /* Ajusta o espaçamento */
+  }
+
+  /* Ajuste nos botões */
+  .product button {
+    width: 100%; /* Faz os botões de produto ocuparem toda a largura */
+  }
+}
+
+/* Para telas de 600px até 1024px */
+@media (max-width: 1024px) {
+  .product {
+    width: 45%; /* Exibe produtos em uma linha de dois */
+  }
+
+  #productsContainer {
+    justify-content: space-between; /* Ajusta a distribuição dos produtos */
+  }
+
+  #showRegisterFormButton, #showLoginFormButton, #privilegedAccessButton {
+    width: 48%; /* Mantém os botões com 48% de largura */
+  }
+}
