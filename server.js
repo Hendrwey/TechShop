@@ -141,5 +141,5 @@ app.post('/products', async (req, res) => {
 
 
 app.listen(3000, () => {
-  console.log('InovaStore rodando na porta 3000');
+  console.log('TechShop rodando na porta 3000');
 });
