@@ -1,6 +1,6 @@
-# InovaStore
+# TechShop
 
-InovaStore é uma aplicação web para gestão de uma loja virtual, com funcionalidades de cadastro e login de usuários, gerenciamento de produtos e um painel administrativo exclusivo para administradores.
+TechShop é uma aplicação web para gestão de uma loja virtual, com funcionalidades de cadastro e login de usuários, gerenciamento de produtos e um painel administrativo exclusivo para administradores.
 
 ## Funcionalidades
 
@@ -57,7 +57,7 @@ Certifique-se de ter o seguinte instalado:
 - **PostgreSQL**
 
 ### Banco de Dados
-1. Crie um banco de dados chamado `InovaStore`.
+1. Crie um banco de dados chamado `TechShop`.
 2. Execute os seguintes comandos SQL para configurar as tabelas:
 
 ```sql
@@ -81,7 +81,7 @@ CREATE TABLE products (
 ### Configuração do Projeto
 1. Clone o repositório:
    ```bash
-   git clone https://github.com/seu-usuario/inovastore.git
+   git clone https://github.com/Hendrwey/TechShop.git
    cd inovastore
    ```
 2. Instale as dependências:
@@ -104,7 +104,5 @@ node generate-hashed-password.js
 ```
 
 ## Melhorias Futuras
-- Implementação de testes unitários.
-- Integração com serviços de pagamento.
-- Sistema de permissões mais robusto para administradores.
+- Deployer em produção
 
